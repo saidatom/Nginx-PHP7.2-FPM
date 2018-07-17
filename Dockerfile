@@ -23,16 +23,14 @@ RUN apt install -y \
   php-curl \
   php-gd \
   php-xml \
-  php-mbstring
+  php-mbstring \
+  php-zip
 
 RUN apt clean
 
 # Install Composer.
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
-
-# Install Drush via composer.
-RUN composer global require drush/drush:8
 
 # Configure composer bin path for drush inside container and from exec.
 RUN echo 'export PATH="$HOME/.composer/vendor/bin:$PATH"' >> /root/.bashrc
