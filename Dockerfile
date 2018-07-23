@@ -24,7 +24,8 @@ RUN apt install -y \
   php-gd \
   php-xml \
   php-mbstring \
-  php-zip
+  php-zip \
+  mysql-client
 
 RUN apt clean
 
