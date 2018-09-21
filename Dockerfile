@@ -23,7 +23,8 @@ RUN apt install -y \
   php-curl \
   php-gd \
   php-xml \
-  php-mbstring
+  php-mbstring \
+  php-soap
 
 RUN apt clean
 
